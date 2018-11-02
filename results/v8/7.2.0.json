@@ -3,8 +3,8 @@
   "_engine": "v8 5.4.500.43",
   "ESNEXT": {
     "_successful": 6,
-    "_count": 152,
-    "_percent": 0.039473684210526314,
+    "_count": 151,
+    "_percent": 0.039735099337748346,
     "candidate (stage 3)›string trimming›String.prototype.trimLeft": true,
     "candidate (stage 3)›string trimming›String.prototype.trimRight": true,
     "candidate (stage 3)›string trimming›String.prototype.trimStart": "\" \t \n abc   \t\n\".trimStart is not a function",
@@ -143,7 +143,6 @@
     "strawman (stage 0)›zones›Zone.prototype.fork": "Zone is not defined",
     "strawman (stage 0)›zones›Zone.prototype.run": "Zone is not defined",
     "strawman (stage 0)›zones›Zone.prototype.wrap": "Zone is not defined",
-    "strawman (stage 0)›asap": "asap is not defined",
     "strawman (stage 0)›syntactic tail calls›direct recursion": "Unexpected token continue",
     "strawman (stage 0)›syntactic tail calls›mutual recursion": "Unexpected token continue",
     "strawman (stage 0)›object shorthand improvements›object initializers": "Unexpected token .",

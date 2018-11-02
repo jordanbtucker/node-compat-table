@@ -1,10 +1,10 @@
 {
-  "_version": "12.0.0-nightly2018110151294c897f",
+  "_version": "12.0.0-nightly20181102a8e98f8ea9",
   "_engine": "v8 7.0.276.32-node.8",
   "ESNEXT": {
     "_successful": 22,
-    "_count": 152,
-    "_percent": 0.14473684210526316,
+    "_count": 151,
+    "_percent": 0.1456953642384106,
     "candidate (stage 3)›string trimming›String.prototype.trimLeft": true,
     "candidate (stage 3)›string trimming›String.prototype.trimRight": true,
     "candidate (stage 3)›string trimming›String.prototype.trimStart": true,
@@ -143,7 +143,6 @@
     "strawman (stage 0)›zones›Zone.prototype.fork": "Zone is not defined",
     "strawman (stage 0)›zones›Zone.prototype.run": "Zone is not defined",
     "strawman (stage 0)›zones›Zone.prototype.wrap": "Zone is not defined",
-    "strawman (stage 0)›asap": "asap is not defined",
     "strawman (stage 0)›syntactic tail calls›direct recursion": "Unexpected token continue",
     "strawman (stage 0)›syntactic tail calls›mutual recursion": "Unexpected token continue",
     "strawman (stage 0)›object shorthand improvements›object initializers": "Unexpected token .",

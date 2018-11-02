@@ -917,7 +917,6 @@
     "strawman (stage 0)›zones›Zone.prototype.fork": "return typeof Zone.prototype.fork == 'function';",
     "strawman (stage 0)›zones›Zone.prototype.run": "return typeof Zone.prototype.run == 'function';",
     "strawman (stage 0)›zones›Zone.prototype.wrap": "return typeof Zone.prototype.wrap == 'function';",
-    "strawman (stage 0)›asap": "var passed = false;\nsetTimeout(function(){ passed = false; }, 1);\nasap(function(){ if(passed)asyncTestPassed(); });\npassed = true;",
     "strawman (stage 0)›syntactic tail calls›direct recursion": "\"use strict\";\nreturn (function f(n){\n  if (n <= 0) {\n    return  \"foo\";\n  }\n  return continue f(n - 1);\n}(1e6)) === \"foo\";",
     "strawman (stage 0)›syntactic tail calls›mutual recursion": "\"use strict\";\nfunction f(n){\n  if (n <= 0) {\n    return  \"foo\";\n  }\n  return continue g(n - 1);\n}\nfunction g(n){\n  if (n <= 0) {\n    return  \"bar\";\n  }\n  return continue f(n - 1);\n}\nreturn f(1e6) === \"foo\" && f(1e6+1) === \"bar\";",
     "strawman (stage 0)›object shorthand improvements›object initializers": "var foo = { bar: 42, baz: 33 };\nvar fuz = { foo.bar, foo['baz'] };\nreturn fuz.bar === 42 && fuz.baz === 33;",

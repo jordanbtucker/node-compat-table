@@ -3,8 +3,8 @@
   "_engine": "v8 6.7.288.43-node.7",
   "ESNEXT": {
     "_successful": 23,
-    "_count": 151,
-    "_percent": 0.152317880794702,
+    "_count": 152,
+    "_percent": 0.1513157894736842,
     "candidate (stage 3)›string trimming›String.prototype.trimLeft": true,
     "candidate (stage 3)›string trimming›String.prototype.trimRight": true,
     "candidate (stage 3)›string trimming›String.prototype.trimStart": true,
@@ -36,6 +36,7 @@
     "candidate (stage 3)›BigInt›DataView.prototype.getBigInt64": true,
     "candidate (stage 3)›BigInt›DataView.prototype.getBigUint64": true,
     "candidate (stage 3)›Object.fromEntries": "Object.fromEntries is not a function",
+    "candidate (stage 3)›Well-formed JSON.stringify": false,
     "draft (stage 2)›Generator function.sent Meta Property": "Unexpected token .",
     "draft (stage 2)›Class and Property Decorators›class decorators": "Invalid or unexpected token",
     "draft (stage 2)›Realms": false,

@@ -3,8 +3,8 @@
   "_engine": "chakracore 1.11.1.0",
   "ESNEXT": {
     "_successful": 6,
-    "_count": 151,
-    "_percent": 0.039735099337748346,
+    "_count": 152,
+    "_percent": 0.039473684210526314,
     "candidate (stage 3)›string trimming›String.prototype.trimLeft": true,
     "candidate (stage 3)›string trimming›String.prototype.trimRight": true,
     "candidate (stage 3)›string trimming›String.prototype.trimStart": "Object doesn't support property or method 'trimStart'",
@@ -36,6 +36,7 @@
     "candidate (stage 3)›BigInt›DataView.prototype.getBigInt64": false,
     "candidate (stage 3)›BigInt›DataView.prototype.getBigUint64": false,
     "candidate (stage 3)›Object.fromEntries": "Object doesn't support property or method 'fromEntries'",
+    "candidate (stage 3)›Well-formed JSON.stringify": false,
     "draft (stage 2)›Generator function.sent Meta Property": "Expected '('",
     "draft (stage 2)›Class and Property Decorators›class decorators": "Invalid character",
     "draft (stage 2)›Realms": false,

@@ -810,6 +810,7 @@
     "candidate (stage 3)›BigInt›DataView.prototype.getBigInt64": "return typeof DataView.prototype.getBigInt64 === 'function';",
     "candidate (stage 3)›BigInt›DataView.prototype.getBigUint64": "return typeof DataView.prototype.getBigUint64 === 'function';",
     "candidate (stage 3)›Object.fromEntries": "var object = Object.fromEntries(new Map([['foo', 42], ['bar', 23]]));\nreturn object.foo === 42 && object.bar === 23;",
+    "candidate (stage 3)›Well-formed JSON.stringify": "return JSON.stringify('\\uDF06\\uD834') === \"\\\"\\\\udf06\\\\ud834\\\"\"\n  && JSON.stringify('\\uDEAD') === \"\\\"\\\\udead\\\"\";",
     "draft (stage 2)›Generator function.sent Meta Property": "var result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';",
     "draft (stage 2)›Class and Property Decorators›class decorators": "class A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;",
     "draft (stage 2)›Realms": "return typeof Realm === \"function\"\n  && [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\", \"indirectEval\", \"initGlobal\", \"nonEval\"].every(function(key){\n    return key in Realm.prototype;\n  });",

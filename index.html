@@ -5320,6 +5320,39 @@ return bar === 123;</div>}
         </tr>
         <tr>
           <td class="feature subsub">
+            <div class="hash" id="ES2015-bindings-const-scope-shadow-resolution"></div><a href="#ES2015-bindings-const-scope-shadow-resolution">scope shadow resolution</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">try {
+    { const bar = 456; }
+    const bar = 123;
+    return bar === 123;
+} catch(e) {
+  return false;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="Identifier &#x27;bar&#x27; has already been declared">Error</div><div class="Error flagged " title="Identifier &#x27;bar&#x27; has already been declared">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Identifier &#x27;bar&#x27; has already been declared">Error</div><div class="Error flagged " title="Identifier &#x27;bar&#x27; has already been declared">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Identifier &#x27;bar&#x27; has already been declared">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
             <div class="hash" id="ES2015-bindings-const-cannot-be-in-statements"></div><a href="#ES2015-bindings-const-cannot-be-in-statements">cannot be in statements</a>
             <div class="info">?
               <div class="fn">function(){
@@ -5562,6 +5595,40 @@ return bar === 123;</div>}
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
           <td class="result flag"><div class="Error unflagged " title="Use of const in strict mode.">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2015-bindings-const-scope-shadow-resolution--strict-mode-"></div><a href="#ES2015-bindings-const-scope-shadow-resolution--strict-mode-">scope shadow resolution (strict mode)</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">'use strict';
+try {
+    { const bar = 456; }
+    const bar = 123;
+    return bar === 123;
+} catch(e) {
+  return false;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -5821,6 +5888,39 @@ return bar === 123;</div>}
         </tr>
         <tr>
           <td class="feature subsub">
+            <div class="hash" id="ES2015-bindings-let-scope-shadow-resolution"></div><a href="#ES2015-bindings-let-scope-shadow-resolution">scope shadow resolution</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">try {
+    { let bar = 456; }
+    let bar = 123;
+    return bar === 123;
+} catch(e) {
+  return false;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Error flagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Error flagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
             <div class="hash" id="ES2015-bindings-let-cannot-be-in-statements"></div><a href="#ES2015-bindings-let-cannot-be-in-statements">cannot be in statements</a>
             <div class="info">?
               <div class="fn">function(){
@@ -6007,6 +6107,40 @@ return bar === 123;</div>}
           <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
           <td class="result flag"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
           <td class="result flag"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2015-bindings-let-scope-shadow-resolution--strict-mode-"></div><a href="#ES2015-bindings-let-scope-shadow-resolution--strict-mode-">scope shadow resolution (strict mode)</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">'use strict';
+try {
+    { let bar = 456; }
+    let bar = 123;
+    return bar === 123;
+} catch(e) {
+  return false;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -29976,7 +30110,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 7.0.276.38-node.11</td>
                     </tr>
                   </table>
-                </div><sup>Nightly!</sup><sub class="flagged">19% complete</sub><sub class="unflagged">14% complete</sub>
+                </div><sup>Nightly!</sup><sub class="flagged">18% complete</sub><sub class="unflagged">14% complete</sub>
               </th>
               <th class="version v11">11.2.0
                 <div class="details"><small>(these versions have identical results)</small>
@@ -29998,7 +30132,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 7.0.276.28-node.5</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">19% complete</sub><sub class="unflagged">14% complete</sub>
+                </div><sub class="flagged">18% complete</sub><sub class="unflagged">14% complete</sub>
               </th>
               <th class="version v10">10.13.0
                 <div class="details"><small>(these versions have identical results)</small>
@@ -30072,7 +30206,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 6.7.288.43-node.7</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">15% complete</sub><sub class="unflagged">12% complete</sub>
+                </div><sub class="flagged">14% complete</sub><sub class="unflagged">12% complete</sub>
               </th>
               <th class="version v10">10.3.0
                 <div class="details"><small>(these versions have identical results)</small>
@@ -32658,6 +32792,73 @@ return set.size === 2
           <td class="result"><div class="Error unflagged " title="(intermediate value).symmetricDifference is not a function">Error</div><div class="Error flagged " title="(intermediate value).symmetricDifference is not a function">Error</div></td>
           <td class="result"><div class="Error unflagged " title="(intermediate value).symmetricDifference is not a function">Error</div><div class="Error flagged " title="(intermediate value).symmetricDifference is not a function">Error</div></td>
           <td class="result"><div class="Error unflagged " title="(intermediate value).symmetricDifference is not a function">Error</div><div class="Error flagged " title="(intermediate value).symmetricDifference is not a function">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="18">
+            <h3>
+              <div class="hash" id="ESNEXT-draft--stage-2--ArrayBuffer-prototype-transfer"></div><a href="#ESNEXT-draft--stage-2--ArrayBuffer-prototype-transfer">ArrayBuffer.prototype.transfer</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-draft--stage-2--ArrayBuffer-prototype-transfer-ArrayBuffer-prototype-transfer--"></div><a href="#ESNEXT-draft--stage-2--ArrayBuffer-prototype-transfer-ArrayBuffer-prototype-transfer--">ArrayBuffer.prototype.transfer()</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">const buffer1 = new Uint8Array([1, 2]).buffer;
+const buffer2 = buffer1.transfer();
+return buffer1.byteLength === 0
+  &amp;&amp; buffer2.byteLength === 2;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="buffer1.transfer is not a function">Error</div><div class="Error flagged " title="buffer1.transfer is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.transfer is not a function">Error</div><div class="Error flagged " title="buffer1.transfer is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.transfer is not a function">Error</div><div class="Error flagged " title="buffer1.transfer is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.transfer is not a function">Error</div><div class="Error flagged " title="buffer1.transfer is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.transfer is not a function">Error</div><div class="Error flagged " title="buffer1.transfer is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.transfer is not a function">Error</div><div class="Error flagged " title="buffer1.transfer is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.transfer is not a function">Error</div><div class="Error flagged " title="buffer1.transfer is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.transfer is not a function">Error</div><div class="Error flagged " title="buffer1.transfer is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.transfer is not a function">Error</div><div class="Error flagged " title="buffer1.transfer is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.transfer is not a function">Error</div><div class="Error flagged " title="buffer1.transfer is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.transfer is not a function">Error</div><div class="Error flagged " title="buffer1.transfer is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.transfer is not a function">Error</div><div class="Error flagged " title="buffer1.transfer is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.transfer is not a function">Error</div><div class="Error flagged " title="buffer1.transfer is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.transfer is not a function">Error</div><div class="Error flagged " title="buffer1.transfer is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.transfer is not a function">Error</div><div class="Error flagged " title="buffer1.transfer is not a function">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-draft--stage-2--ArrayBuffer-prototype-transfer-ArrayBuffer-prototype-realloc--"></div><a href="#ESNEXT-draft--stage-2--ArrayBuffer-prototype-transfer-ArrayBuffer-prototype-realloc--">ArrayBuffer.prototype.realloc()</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">const buffer1 = new ArrayBuffer(1024);
+const buffer2 = buffer1.realloc(256);
+return buffer1.byteLength === 0
+  &amp;&amp; buffer2.byteLength === 256;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="buffer1.realloc is not a function">Error</div><div class="Error flagged " title="buffer1.realloc is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.realloc is not a function">Error</div><div class="Error flagged " title="buffer1.realloc is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.realloc is not a function">Error</div><div class="Error flagged " title="buffer1.realloc is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.realloc is not a function">Error</div><div class="Error flagged " title="buffer1.realloc is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.realloc is not a function">Error</div><div class="Error flagged " title="buffer1.realloc is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.realloc is not a function">Error</div><div class="Error flagged " title="buffer1.realloc is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.realloc is not a function">Error</div><div class="Error flagged " title="buffer1.realloc is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.realloc is not a function">Error</div><div class="Error flagged " title="buffer1.realloc is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.realloc is not a function">Error</div><div class="Error flagged " title="buffer1.realloc is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.realloc is not a function">Error</div><div class="Error flagged " title="buffer1.realloc is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.realloc is not a function">Error</div><div class="Error flagged " title="buffer1.realloc is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.realloc is not a function">Error</div><div class="Error flagged " title="buffer1.realloc is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.realloc is not a function">Error</div><div class="Error flagged " title="buffer1.realloc is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.realloc is not a function">Error</div><div class="Error flagged " title="buffer1.realloc is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="buffer1.realloc is not a function">Error</div><div class="Error flagged " title="buffer1.realloc is not a function">Error</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>

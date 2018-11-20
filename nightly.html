@@ -2162,6 +2162,24 @@ return bar === 123;</div>}
         </tr>
         <tr>
           <td class="feature subsub">
+            <div class="hash" id="ES2015-bindings-const-scope-shadow-resolution"></div><a href="#ES2015-bindings-const-scope-shadow-resolution">scope shadow resolution</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">try {
+    { const bar = 456; }
+    const bar = 123;
+    return bar === 123;
+} catch(e) {
+  return false;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
             <div class="hash" id="ES2015-bindings-const-cannot-be-in-statements"></div><a href="#ES2015-bindings-const-cannot-be-in-statements">cannot be in statements</a>
             <div class="info">?
               <div class="fn">function(){
@@ -2283,6 +2301,25 @@ return bar === 123;</div>}
             </div>
           </td>
           <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2015-bindings-const-scope-shadow-resolution--strict-mode-"></div><a href="#ES2015-bindings-const-scope-shadow-resolution--strict-mode-">scope shadow resolution (strict mode)</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">'use strict';
+try {
+    { const bar = 456; }
+    const bar = 123;
+    return bar === 123;
+} catch(e) {
+  return false;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
           <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
         </tr>
         <tr>
@@ -2423,6 +2460,24 @@ return bar === 123;</div>}
         </tr>
         <tr>
           <td class="feature subsub">
+            <div class="hash" id="ES2015-bindings-let-scope-shadow-resolution"></div><a href="#ES2015-bindings-let-scope-shadow-resolution">scope shadow resolution</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">try {
+    { let bar = 456; }
+    let bar = 123;
+    return bar === 123;
+} catch(e) {
+  return false;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
             <div class="hash" id="ES2015-bindings-let-cannot-be-in-statements"></div><a href="#ES2015-bindings-let-cannot-be-in-statements">cannot be in statements</a>
             <div class="info">?
               <div class="fn">function(){
@@ -2518,6 +2573,25 @@ return bar === 123;</div>}
             </div>
           </td>
           <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2015-bindings-let-scope-shadow-resolution--strict-mode-"></div><a href="#ES2015-bindings-let-scope-shadow-resolution--strict-mode-">scope shadow resolution (strict mode)</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">'use strict';
+try {
+    { let bar = 456; }
+    let bar = 123;
+    return bar === 123;
+} catch(e) {
+  return false;
+}</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
           <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
         </tr>
         <tr>
@@ -14600,6 +14674,43 @@ return set.size === 2
           </td>
           <td class="result"></td>
           <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;symmetricDifference&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ESNEXT-draft--stage-2--ArrayBuffer-prototype-transfer"></div><a href="#ESNEXT-draft--stage-2--ArrayBuffer-prototype-transfer">ArrayBuffer.prototype.transfer</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-draft--stage-2--ArrayBuffer-prototype-transfer-ArrayBuffer-prototype-transfer--"></div><a href="#ESNEXT-draft--stage-2--ArrayBuffer-prototype-transfer-ArrayBuffer-prototype-transfer--">ArrayBuffer.prototype.transfer()</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">const buffer1 = new Uint8Array([1, 2]).buffer;
+const buffer2 = buffer1.transfer();
+return buffer1.byteLength === 0
+  &amp;&amp; buffer2.byteLength === 2;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;transfer&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-draft--stage-2--ArrayBuffer-prototype-transfer-ArrayBuffer-prototype-realloc--"></div><a href="#ESNEXT-draft--stage-2--ArrayBuffer-prototype-transfer-ArrayBuffer-prototype-realloc--">ArrayBuffer.prototype.realloc()</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">const buffer1 = new ArrayBuffer(1024);
+const buffer2 = buffer1.realloc(256);
+return buffer1.byteLength === 0
+  &amp;&amp; buffer2.byteLength === 256;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;realloc&#x27;">Error</div></td>
         </tr>
       </table>
       <table class="results">

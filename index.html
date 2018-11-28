@@ -38,8 +38,14 @@
                   </table>
                 </div><sup>Nightly!</sup><sub class="flagged">99% complete</sub><sub class="unflagged">99% complete</sub>
               </th>
-              <th class="version v11">11.2.0
+              <th class="version v11">11.3.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>11.3.0</td>
+                      <td>v8 7.0.276.38-node.11</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>11.2.0</td>
@@ -60,8 +66,14 @@
                   </table>
                 </div><sub class="flagged">99% complete</sub><sub class="unflagged">99% complete</sub>
               </th>
-              <th class="version v10">10.13.0
+              <th class="version v10">10.14.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>10.14.0</td>
+                      <td>v8 6.8.275.32-node.36</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>10.13.0</td>
@@ -276,6 +288,12 @@
                     <tr>
                       <td>9.0.0</td>
                       <td>v8 6.2.414.32-node.8</td>
+                    </tr>
+                  </table>
+                  <table>
+                    <tr>
+                      <td>8.14.0</td>
+                      <td>v8 6.2.414.72</td>
                     </tr>
                   </table>
                   <table>
@@ -570,8 +588,14 @@
                   </table>
                 </div><sub class="flagged">99% complete</sub><sub class="unflagged">99% complete</sub>
               </th>
-              <th class="version v6">6.14.4
+              <th class="version v6">6.15.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>6.15.0</td>
+                      <td>v8 5.1.281.111</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>6.14.4</td>
@@ -2941,6 +2965,33 @@ return result === 'yy' &amp;&amp; re.lastIndex === 5;</div>}
           <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor &#x27;u&#x27;">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor &#x27;u&#x27;">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor &#x27;u&#x27;">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor &#x27;u&#x27;">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor &#x27;u&#x27;">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor &#x27;u&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2015-syntax-RegExp--y--and--u--flags--u--flag--non-BMP-Unicode-characters"></div><a href="#ES2015-syntax-RegExp--y--and--u--flags--u--flag--non-BMP-Unicode-characters">&quot;u&quot; flag, non-BMP Unicode characters</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return &quot;𠮷x&quot;.match(/^.x$/u)[0].length === 3;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor &#x27;u&#x27;">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor &#x27;u&#x27;">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Invalid flags supplied to RegExp constructor &#x27;u&#x27;">Error</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor &#x27;u&#x27;">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Invalid flags supplied to RegExp constructor &#x27;u&#x27;">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -23579,8 +23630,14 @@ return a === 3;</div>}
                   </table>
                 </div><sup>Nightly!</sup><sub class="flagged">100% complete</sub><sub class="unflagged">100% complete</sub>
               </th>
-              <th class="version v11">11.2.0
+              <th class="version v11">11.3.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>11.3.0</td>
+                      <td>v8 7.0.276.38-node.11</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>11.2.0</td>
@@ -23601,8 +23658,14 @@ return a === 3;</div>}
                   </table>
                 </div><sub class="flagged">100% complete</sub><sub class="unflagged">100% complete</sub>
               </th>
-              <th class="version v10">10.13.0
+              <th class="version v10">10.14.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>10.14.0</td>
+                      <td>v8 6.8.275.32-node.36</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>10.13.0</td>
@@ -23817,6 +23880,12 @@ return a === 3;</div>}
                     <tr>
                       <td>9.0.0</td>
                       <td>v8 6.2.414.32-node.8</td>
+                    </tr>
+                  </table>
+                  <table>
+                    <tr>
+                      <td>8.14.0</td>
+                      <td>v8 6.2.414.72</td>
                     </tr>
                   </table>
                   <table>
@@ -24111,8 +24180,14 @@ return a === 3;</div>}
                   </table>
                 </div><sub class="flagged">100% complete</sub><sub class="unflagged">100% complete</sub>
               </th>
-              <th class="version v6">6.14.4
+              <th class="version v6">6.15.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>6.15.0</td>
+                      <td>v8 5.1.281.111</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>6.14.4</td>
@@ -25226,8 +25301,14 @@ return (get + '' === &quot;length,1,2&quot;);</div>}
                   </table>
                 </div><sup>Nightly!</sup><sub class="flagged">100% complete</sub><sub class="unflagged">100% complete</sub>
               </th>
-              <th class="version v11">11.2.0
+              <th class="version v11">11.3.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>11.3.0</td>
+                      <td>v8 7.0.276.38-node.11</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>11.2.0</td>
@@ -25248,8 +25329,14 @@ return (get + '' === &quot;length,1,2&quot;);</div>}
                   </table>
                 </div><sub class="flagged">100% complete</sub><sub class="unflagged">100% complete</sub>
               </th>
-              <th class="version v10">10.13.0
+              <th class="version v10">10.14.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>10.14.0</td>
+                      <td>v8 6.8.275.32-node.36</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>10.13.0</td>
@@ -25464,6 +25551,12 @@ return (get + '' === &quot;length,1,2&quot;);</div>}
                     <tr>
                       <td>9.0.0</td>
                       <td>v8 6.2.414.32-node.8</td>
+                    </tr>
+                  </table>
+                  <table>
+                    <tr>
+                      <td>8.14.0</td>
+                      <td>v8 6.2.414.72</td>
                     </tr>
                   </table>
                   <table>
@@ -25758,8 +25851,14 @@ return (get + '' === &quot;length,1,2&quot;);</div>}
                   </table>
                 </div><sub class="flagged">54% complete</sub><sub class="unflagged">28% complete</sub>
               </th>
-              <th class="version v6">6.14.4
+              <th class="version v6">6.15.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>6.15.0</td>
+                      <td>v8 5.1.281.111</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>6.14.4</td>
@@ -28474,8 +28573,14 @@ return i === 0;</div>}
                   </table>
                 </div><sup>Nightly!</sup><sub class="flagged">100% complete</sub><sub class="unflagged">100% complete</sub>
               </th>
-              <th class="version v11">11.2.0
+              <th class="version v11">11.3.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>11.3.0</td>
+                      <td>v8 7.0.276.38-node.11</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>11.2.0</td>
@@ -28496,8 +28601,14 @@ return i === 0;</div>}
                   </table>
                 </div><sub class="flagged">100% complete</sub><sub class="unflagged">100% complete</sub>
               </th>
-              <th class="version v10">10.13.0
+              <th class="version v10">10.14.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>10.14.0</td>
+                      <td>v8 6.8.275.32-node.36</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>10.13.0</td>
@@ -28712,6 +28823,12 @@ return i === 0;</div>}
                     <tr>
                       <td>9.0.0</td>
                       <td>v8 6.2.414.32-node.8</td>
+                    </tr>
+                  </table>
+                  <table>
+                    <tr>
+                      <td>8.14.0</td>
+                      <td>v8 6.2.414.72</td>
                     </tr>
                   </table>
                   <table>
@@ -29006,8 +29123,14 @@ return i === 0;</div>}
                   </table>
                 </div><sub class="flagged">8% complete</sub><sub class="unflagged">0% complete</sub>
               </th>
-              <th class="version v6">6.14.4
+              <th class="version v6">6.15.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>6.15.0</td>
+                      <td>v8 5.1.281.111</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>6.14.4</td>
@@ -30134,10 +30257,16 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 7.0.276.38-node.13</td>
                     </tr>
                   </table>
-                </div><sup>Nightly!</sup><sub class="flagged">18% complete</sub><sub class="unflagged">14% complete</sub>
+                </div><sup>Nightly!</sup><sub class="flagged">14% complete</sub><sub class="unflagged">9% complete</sub>
               </th>
-              <th class="version v11">11.2.0
+              <th class="version v11">11.3.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>11.3.0</td>
+                      <td>v8 7.0.276.38-node.11</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>11.2.0</td>
@@ -30156,10 +30285,16 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 7.0.276.28-node.5</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">18% complete</sub><sub class="unflagged">14% complete</sub>
+                </div><sub class="flagged">14% complete</sub><sub class="unflagged">9% complete</sub>
               </th>
-              <th class="version v10">10.13.0
+              <th class="version v10">10.14.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>10.14.0</td>
+                      <td>v8 6.8.275.32-node.36</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>10.13.0</td>
@@ -30190,7 +30325,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 6.8.275.24-node.14</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">15% complete</sub><sub class="unflagged">12% complete</sub>
+                </div><sub class="flagged">11% complete</sub><sub class="unflagged">8% complete</sub>
               </th>
               <th class="version v10">10.8.0
                 <div class="details"><small>(these versions have identical results)</small>
@@ -30230,7 +30365,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 6.7.288.43-node.7</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">14% complete</sub><sub class="unflagged">12% complete</sub>
+                </div><sub class="flagged">10% complete</sub><sub class="unflagged">8% complete</sub>
               </th>
               <th class="version v10">10.3.0
                 <div class="details"><small>(these versions have identical results)</small>
@@ -30264,7 +30399,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 6.6.346.24-node.5</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">9% complete</sub><sub class="unflagged">7% complete</sub>
+                </div><sub class="flagged">4% complete</sub><sub class="unflagged">2% complete</sub>
               </th>
               <th class="version v9">9.11.2
                 <div class="details"><small>(these versions have identical results)</small>
@@ -30378,6 +30513,12 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                   </table>
                   <table>
                     <tr>
+                      <td>8.14.0</td>
+                      <td>v8 6.2.414.72</td>
+                    </tr>
+                  </table>
+                  <table>
+                    <tr>
                       <td>8.13.0</td>
                       <td>v8 6.2.414.72</td>
                     </tr>
@@ -30424,7 +30565,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 6.2.414.50</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">5% complete</sub><sub class="unflagged">3% complete</sub>
+                </div><sub class="flagged">1% complete</sub><sub class="unflagged">1% complete</sub>
               </th>
               <th class="version v8">8.9.4
                 <div class="details"><small>(these versions have identical results)</small>
@@ -30476,7 +30617,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 6.1.534.42</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">5% complete</sub><sub class="unflagged">3% complete</sub>
+                </div><sub class="flagged">1% complete</sub><sub class="unflagged">1% complete</sub>
               </th>
               <th class="version v8">8.6.0
                 <div class="details"><small>(these versions have identical results)</small>
@@ -30504,7 +30645,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 6.0.286.52</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">5% complete</sub><sub class="unflagged">3% complete</sub>
+                </div><sub class="flagged">1% complete</sub><sub class="unflagged">1% complete</sub>
               </th>
               <th class="version v8">8.2.1
                 <div class="details"><small>(these versions have identical results)</small>
@@ -30556,7 +30697,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 5.8.283.41</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">3% complete</sub><sub class="unflagged">3% complete</sub>
+                </div><sub class="flagged">1% complete</sub><sub class="unflagged">1% complete</sub>
               </th>
               <th class="version v7">7.10.1
                 <div class="details"><small>(these versions have identical results)</small>
@@ -30620,7 +30761,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 5.5.372.40</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">3% complete</sub><sub class="unflagged">3% complete</sub>
+                </div><sub class="flagged">1% complete</sub><sub class="unflagged">1% complete</sub>
               </th>
               <th class="version v7">7.5.0
                 <div class="details"><small>(these versions have identical results)</small>
@@ -30666,10 +30807,16 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 5.4.500.36</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">3% complete</sub><sub class="unflagged">3% complete</sub>
+                </div><sub class="flagged">1% complete</sub><sub class="unflagged">1% complete</sub>
               </th>
-              <th class="version v6">6.14.4
+              <th class="version v6">6.15.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>6.15.0</td>
+                      <td>v8 5.1.281.111</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>6.14.4</td>
@@ -30862,7 +31009,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 5.1.281.81</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">3% complete</sub><sub class="unflagged">3% complete</sub>
+                </div><sub class="flagged">1% complete</sub><sub class="unflagged">1% complete</sub>
               </th>
               <th class="version v6">6.4.0
                 <div class="details"><small>(these versions have identical results)</small>
@@ -30914,7 +31061,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 5.0.71.35</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">3% complete</sub><sub class="unflagged">3% complete</sub>
+                </div><sub class="flagged">1% complete</sub><sub class="unflagged">1% complete</sub>
               </th>
               <th class="version v5">5.12.0
                 <div class="details"><small>(these versions have identical results)</small>
@@ -31032,7 +31179,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 4.6.85.28</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">3% complete</sub><sub class="unflagged">2% complete</sub>
+                </div><sub class="flagged">1% complete</sub><sub class="unflagged">1% complete</sub>
               </th>
               <th class="version v4">4.9.1
                 <div class="details"><small>(these versions have identical results)</small>
@@ -31276,7 +31423,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 4.5.103.30</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">2% complete</sub><sub class="unflagged">2% complete</sub>
+                </div><sub class="flagged">1% complete</sub><sub class="unflagged">1% complete</sub>
               </th>
               <th class="version v0">0.12.18
                 <div class="details"><small>(these versions have identical results)</small>
@@ -31286,7 +31433,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>v8 3.28.71.20</td>
                     </tr>
                   </table>
-                </div><sub class="flagged">2% complete</sub><sub class="unflagged">1% complete</sub>
+                </div><sub class="flagged">1% complete</sub><sub class="unflagged">1% complete</sub>
               </th>
               <th class="version v0">0.10.48
                 <div class="details"><small>(these versions have identical results)</small>
@@ -31625,33 +31772,6 @@ return a === '1a2b'
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3---Symbol-prototype-description"></div><a href="#ESNEXT-candidate--stage-3---Symbol-prototype-description">Symbol.prototype.description</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return Symbol('foo').description === 'foo';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
             <div class="hash" id="ESNEXT-candidate--stage-3---Object-fromEntries"></div><a href="#ESNEXT-candidate--stage-3---Object-fromEntries">Object.fromEntries</a>
             <div class="info">?
               <div class="fn">function(){
@@ -31881,210 +32001,6 @@ return new C().x() === 42;</div>}
           <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Error flagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-        </tr>
-        <tr>
-          <td class="feature sub" colspan="18">
-            <h3>
-              <div class="hash" id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision">Function.prototype.toString revision</a>
-            </h3>
-          </td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-functions-created-with-the-Function-constructor"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-functions-created-with-the-Function-constructor">functions created with the Function constructor</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var fn = Function('a', ' /\x2A a \x2A/ b, c /\x2A b \x2A/ //', '/\x2A c \x2A/ ; /\x2A d \x2A/ //');
-var str = 'function anonymous(a, /\x2A a \x2A/ b, c /\x2A b \x2A/ //\n) {\n/\x2A c \x2A/ ; /\x2A d \x2A/ //\n}';
-return fn + '' === str;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token ;">Error</div><div class="Error flagged " title="Unexpected token ;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-arrows"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-arrows">arrows</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var str = 'a =&gt; b';
-return eval('(' + str + ')') + '' === str;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result flag"><div class="Error unflagged " title="Unexpected token =&gt;">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token &gt;">Error</div><div class="Error flagged " title="Unexpected token &gt;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision--native-code-"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision--native-code-">[native code]</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">const NATIVE_EVAL_RE = /\bfunction\b[\s\S]*\beval\b[\s\S]*\([\s\S]*\)[\s\S]*\{[\s\S]*\[[\s\S]*\bnative\b[\s\S]+\bcode\b[\s\S]*\][\s\S]*\}/;
-return NATIVE_EVAL_RE.test(eval + '');</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-class-expression-with-implicit-constructor"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-class-expression-with-implicit-constructor">class expression with implicit constructor</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var str = 'class A {}';
-return eval('(' + str + ')') + '' === str;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result flag"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Error flagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-class-expression-with-explicit-constructor"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-class-expression-with-explicit-constructor">class expression with explicit constructor</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var str = 'class /\x2A a \x2A/ A /\x2A b \x2A/ extends /\x2A c \x2A/ function B(){} /\x2A d \x2A/ { /\x2A e \x2A/ constructor /\x2A f \x2A/ ( /\x2A g \x2A/ ) /\x2A h \x2A/ { /\x2A i \x2A/ ; /\x2A j \x2A/ } /\x2A k \x2A/ m /\x2A l \x2A/ ( /\x2A m \x2A/ ) /\x2A n \x2A/ { /\x2A o \x2A/ } /\x2A p \x2A/ }';
-return eval('(/\x2A before \x2A/' + str + '/\x2A after \x2A/)') + '' === str;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result flag"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Error flagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected reserved word">Error</div><div class="Error flagged " title="Unexpected reserved word">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-unicode-escape-sequences-in-identifiers"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-unicode-escape-sequences-in-identifiers">unicode escape sequences in identifiers</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var str = 'function \\u0061(\\u{62}, \\u0063) { \\u0062 = \\u{00063}; return b; }';
-return eval('(/\x2A before \x2A/' + str + '/\x2A after \x2A/)') + '' === str;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token ILLEGAL">Error</div><div class="Error flagged " title="Unexpected token ILLEGAL">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-methods-and-computed-property-names"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-methods-and-computed-property-names">methods and computed property names</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var str = '[ /\x2A a \x2A/ &quot;f&quot; /\x2A b \x2A/ ] /\x2A c \x2A/ ( /\x2A d \x2A/ ) /\x2A e \x2A/ { /\x2A f \x2A/ }';
-return eval('({ /\x2A before \x2A/' + str + '/\x2A after \x2A/ }.f)') + '' === str;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes unflagged " title="Test passed">Yes</div><div class="Yes flagged " title="Test passed">Yes</div></td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result flag"><div class="No unflagged " title="Test failed">No</div><div class="Yes flagged required" title="Yes, but requires --harmony flag">Flag</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Unexpected token [">Error</div><div class="Error flagged " title="Unexpected token [">Error</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="18">

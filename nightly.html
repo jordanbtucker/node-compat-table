@@ -950,6 +950,18 @@ return result === 'yy' &amp;&amp; re.lastIndex === 5;</div>}
         </tr>
         <tr>
           <td class="feature subsub">
+            <div class="hash" id="ES2015-syntax-RegExp--y--and--u--flags--u--flag--non-BMP-Unicode-characters"></div><a href="#ES2015-syntax-RegExp--y--and--u--flags--u--flag--non-BMP-Unicode-characters">&quot;u&quot; flag, non-BMP Unicode characters</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return &quot;𠮷x&quot;.match(/^.x$/u)[0].length === 3;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
             <div class="hash" id="ES2015-syntax-RegExp--y--and--u--flags--u--flag--Unicode-code-point-escapes"></div><a href="#ES2015-syntax-RegExp--y--and--u--flags--u--flag--Unicode-code-point-escapes">&quot;u&quot; flag, Unicode code point escapes</a>
             <div class="info">?
               <div class="fn">function(){
@@ -13909,7 +13921,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>chakracore 1.11.1.0</td>
                     </tr>
                   </table>
-                </div><sup>Chakra</sup><sub class="unflagged">3% complete</sub>
+                </div><sup>Chakra</sup><sub class="unflagged">1% complete</sub>
               </th>
             </tr>
           </table>
@@ -14045,18 +14057,6 @@ return a === '1a2b'
         </tr>
         <tr>
           <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3---Symbol-prototype-description"></div><a href="#ESNEXT-candidate--stage-3---Symbol-prototype-description">Symbol.prototype.description</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return Symbol('foo').description === 'foo';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
-          <td class="result"><div class="No" title="Test failed">No</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
             <div class="hash" id="ESNEXT-candidate--stage-3---Object-fromEntries"></div><a href="#ESNEXT-candidate--stage-3---Object-fromEntries">Object.fromEntries</a>
             <div class="info">?
               <div class="fn">function(){
@@ -14181,105 +14181,6 @@ return new C().x() === 42;</div>}
           </td>
           <td class="result"></td>
           <td class="result"><div class="Error" title="Invalid character">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature sub" colspan="3">
-            <h3>
-              <div class="hash" id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision">Function.prototype.toString revision</a>
-            </h3>
-          </td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-functions-created-with-the-Function-constructor"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-functions-created-with-the-Function-constructor">functions created with the Function constructor</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var fn = Function('a', ' /\x2A a \x2A/ b, c /\x2A b \x2A/ //', '/\x2A c \x2A/ ; /\x2A d \x2A/ //');
-var str = 'function anonymous(a, /\x2A a \x2A/ b, c /\x2A b \x2A/ //\n) {\n/\x2A c \x2A/ ; /\x2A d \x2A/ //\n}';
-return fn + '' === str;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="No" title="Test failed">No</div></td>
-          <td class="result"><div class="No" title="Test failed">No</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-arrows"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-arrows">arrows</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var str = 'a =&gt; b';
-return eval('(' + str + ')') + '' === str;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision--native-code-"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision--native-code-">[native code]</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">const NATIVE_EVAL_RE = /\bfunction\b[\s\S]*\beval\b[\s\S]*\([\s\S]*\)[\s\S]*\{[\s\S]*\[[\s\S]*\bnative\b[\s\S]+\bcode\b[\s\S]*\][\s\S]*\}/;
-return NATIVE_EVAL_RE.test(eval + '');</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-class-expression-with-implicit-constructor"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-class-expression-with-implicit-constructor">class expression with implicit constructor</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var str = 'class A {}';
-return eval('(' + str + ')') + '' === str;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-class-expression-with-explicit-constructor"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-class-expression-with-explicit-constructor">class expression with explicit constructor</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var str = 'class /\x2A a \x2A/ A /\x2A b \x2A/ extends /\x2A c \x2A/ function B(){} /\x2A d \x2A/ { /\x2A e \x2A/ constructor /\x2A f \x2A/ ( /\x2A g \x2A/ ) /\x2A h \x2A/ { /\x2A i \x2A/ ; /\x2A j \x2A/ } /\x2A k \x2A/ m /\x2A l \x2A/ ( /\x2A m \x2A/ ) /\x2A n \x2A/ { /\x2A o \x2A/ } /\x2A p \x2A/ }';
-return eval('(/\x2A before \x2A/' + str + '/\x2A after \x2A/)') + '' === str;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-unicode-escape-sequences-in-identifiers"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-unicode-escape-sequences-in-identifiers">unicode escape sequences in identifiers</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var str = 'function \\u0061(\\u{62}, \\u0063) { \\u0062 = \\u{00063}; return b; }';
-return eval('(/\x2A before \x2A/' + str + '/\x2A after \x2A/)') + '' === str;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="No" title="Test failed">No</div></td>
-          <td class="result"><div class="No" title="Test failed">No</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Function-prototype-toString-revision-methods-and-computed-property-names"></div><a href="#ESNEXT-candidate--stage-3--Function-prototype-toString-revision-methods-and-computed-property-names">methods and computed property names</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var str = '[ /\x2A a \x2A/ &quot;f&quot; /\x2A b \x2A/ ] /\x2A c \x2A/ ( /\x2A d \x2A/ ) /\x2A e \x2A/ { /\x2A f \x2A/ }';
-return eval('({ /\x2A before \x2A/' + str + '/\x2A after \x2A/ }.f)') + '' === str;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="No" title="Test failed">No</div></td>
-          <td class="result"><div class="No" title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="3">

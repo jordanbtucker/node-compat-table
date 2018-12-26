@@ -14577,6 +14577,42 @@ return set.size === 2
           <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;symmetricDifference&#x27;">Error</div></td>
         </tr>
         <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-draft--stage-2--Set-methods-Set-prototype-isDisjointWith"></div><a href="#ESNEXT-draft--stage-2--Set-methods-Set-prototype-isDisjointWith">Set.prototype.isDisjointWith</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return new Set([1, 2, 3]).isDisjointWith([4, 5, 6]);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;isDisjointWith&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-draft--stage-2--Set-methods-Set-prototype-isSubsetOf"></div><a href="#ESNEXT-draft--stage-2--Set-methods-Set-prototype-isSubsetOf">Set.prototype.isSubsetOf</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;isSubsetOf&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-draft--stage-2--Set-methods-Set-prototype-isSupersetOf"></div><a href="#ESNEXT-draft--stage-2--Set-methods-Set-prototype-isSupersetOf">Set.prototype.isSupersetOf</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;isSupersetOf&#x27;">Error</div></td>
+        </tr>
+        <tr>
           <td class="feature sub" colspan="3">
             <h3>
               <div class="hash" id="ESNEXT-draft--stage-2--ArrayBuffer-prototype-transfer"></div><a href="#ESNEXT-draft--stage-2--ArrayBuffer-prototype-transfer">ArrayBuffer.prototype.transfer</a>
@@ -14754,6 +14790,49 @@ return results.length === 3
           </td>
           <td class="result"><div class="Error" title="&quot;a𠮷b&quot;.codePoints(...) is not a function or its return value is not iterable">Error</div></td>
           <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;codePoints&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1---Promise-allSettled"></div><a href="#ESNEXT-proposal--stage-1---Promise-allSettled">Promise.allSettled</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">Promise.allSettled([
+  Promise.resolve(1),
+  Promise.reject(2),
+  Promise.resolve(3)
+]).then(it =&gt; {
+  if (
+    it.length === 3 &amp;&amp;
+    it[0].status === 'fulfilled' &amp;&amp; it[0].value === 1 &amp;&amp;
+    it[1].status === 'rejected' &amp;&amp; it[1].reason === 2 &amp;&amp;
+    it[2].status === 'fulfilled' &amp;&amp; it[2].value === 3
+  ) asyncTestPassed();
+});</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;allSettled&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1---Math-seededPRNG"></div><a href="#ESNEXT-proposal--stage-1---Math-seededPRNG">Math.seededPRNG</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var gen1 = Math.seededPRNG({ seed: 42 });
+var gen2 = Math.seededPRNG({ seed: 42 });
+if (!gen1.next || !gen1[Symbol.iterator]) return false;
+var first = gen1.next().value;
+if (first &lt; 0 || first &gt; 1) return false;
+if (first !== gen2.next().value) return false;
+var second = gen1.next().value;
+if (first === second) return false;
+return second === gen2.next().value;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;seededPRNG&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="3">
@@ -15665,6 +15744,34 @@ return map.size === 2
         </tr>
         <tr>
           <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-deleteAll"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-deleteAll">Map.prototype.deleteAll</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var map = new Map([[1, 2], [3, 4], [5, 6], [7, 8]]);
+map.deleteAll(1, 5)
+return map.size === 2
+  &amp;&amp; map.get(3) === 4
+  &amp;&amp; map.get(7) === 8;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;deleteAll&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-every"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-every">Map.prototype.every</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return new Map([[1, 4], [2, 5], [3, 6]]).every(it =&gt; typeof it == 'number');</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;every&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
             <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-filter"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-filter">Map.prototype.filter</a>
             <div class="info">?
               <div class="fn">function(){
@@ -15677,6 +15784,56 @@ return map.size === 2
           </td>
           <td class="result"></td>
           <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;filter&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-find"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-find">Map.prototype.find</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return new Map([[1, 2], [2, 3], [3, 4]]).find(it =&gt; it % 2) === 3;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;find&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-findKey"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-findKey">Map.prototype.findKey</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return new Map([[1, 2], [2, 3], [3, 4]]).findKey(it =&gt; it % 2) === 2;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;findKey&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-includes"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-includes">Map.prototype.includes</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return new Map([[1, 2], [2, NaN]]).includes(2)
+  &amp;&amp; new Map([[1, 2], [2, NaN]]).includes(NaN);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;includes&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-keyOf"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-keyOf">Map.prototype.keyOf</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return new Map([[1, 2], [2, NaN]]).keyOf(2) === 1
+  &amp;&amp; new Map([[1, 2], [2, NaN]]).keyOf(NaN) === undefined;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;keyOf&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -15725,6 +15882,30 @@ return map.size === 3
           </td>
           <td class="result"></td>
           <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;merge&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-reduce"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-reduce">Map.prototype.reduce</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return new Map([['a', 1], ['b', 2], ['c', 3], ]).reduce(((a, b) =&gt; a + b), 1) === 7;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;reduce&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-some"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-Map-prototype-some">Map.prototype.some</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return new Map([[1, 4], [2, 5], [3, 6]]).some(it =&gt; it % 2);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;some&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">
@@ -15848,6 +16029,100 @@ return set.size === 3
           </td>
           <td class="result"></td>
           <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;some&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-WeakMap-prototype-deleteAll"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-WeakMap-prototype-deleteAll">WeakMap.prototype.deleteAll</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var a = {};
+var b = {};
+var c = {};
+var d = {};
+var map = new WeakMap([[a, 1], [b, 2], [c, 3], [d, 4]]);
+map.deleteAll(a, c)
+return !map.has(a)
+  &amp;&amp; map.get(b) === 2
+  &amp;&amp; !map.has(c)
+  &amp;&amp; map.get(d) === 4;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;deleteAll&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-WeakSet-prototype-addAll"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-WeakSet-prototype-addAll">WeakSet.prototype.addAll</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var a = {};
+var b = {};
+var c = {};
+var d = {};
+var set = new WeakSet([a, b]);
+set.addAll(c, d)
+return set.has(a)
+  &amp;&amp; set.has(b)
+  &amp;&amp; set.has(c)
+  &amp;&amp; set.has(d);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;addAll&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1--Collections-methods-WeakSet-prototype-deleteAll"></div><a href="#ESNEXT-proposal--stage-1--Collections-methods-WeakSet-prototype-deleteAll">WeakSet.prototype.deleteAll</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var a = {};
+var b = {};
+var c = {};
+var d = {};
+var set = new WeakSet([a, b, c, d]);
+set.deleteAll(a, c)
+return !set.has(a)
+  &amp;&amp; set.has(b)
+  &amp;&amp; !set.has(c)
+  &amp;&amp; set.has(d);</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;deleteAll&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ESNEXT-proposal--stage-1----BigInt--Number---fromString"></div><a href="#ESNEXT-proposal--stage-1----BigInt--Number---fromString">{ BigInt, Number }.fromString</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1----BigInt--Number---fromString-Number-fromString"></div><a href="#ESNEXT-proposal--stage-1----BigInt--Number---fromString-Number-fromString">Number.fromString</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Number.fromString('42') === 42;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;fromString&#x27;">Error</div></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-proposal--stage-1----BigInt--Number---fromString-BigInt-fromString"></div><a href="#ESNEXT-proposal--stage-1----BigInt--Number---fromString-BigInt-fromString">BigInt.fromString</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return BigInt.fromString('42') === 42n;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Unexpected identifier after numeric literal">Error</div></td>
         </tr>
       </table>
       <table class="results">

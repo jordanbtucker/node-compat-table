@@ -1,6 +1,6 @@
 {
-  "_version": "12.0.0-nightly20190109e54d11e2f6--es_staging",
-  "_engine": "v8 7.1.302.33-node.8",
+  "_version": "12.0.0-nightly20190110e18b461965--es_staging",
+  "_engine": "v8 7.1.302.33-node.9",
   "ESNEXT": {
     "_successful": 23,
     "_count": 164,

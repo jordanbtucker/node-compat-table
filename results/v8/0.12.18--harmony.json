@@ -42,7 +42,7 @@
     "draft (stage 2)›Set methods›Set.prototype.union": "undefined is not a function",
     "draft (stage 2)›Set methods›Set.prototype.difference": "undefined is not a function",
     "draft (stage 2)›Set methods›Set.prototype.symmetricDifference": "undefined is not a function",
-    "draft (stage 2)›Set methods›Set.prototype.isDisjointWith": "undefined is not a function",
+    "draft (stage 2)›Set methods›Set.prototype.isDisjointFrom": "undefined is not a function",
     "draft (stage 2)›Set methods›Set.prototype.isSubsetOf": "undefined is not a function",
     "draft (stage 2)›Set methods›Set.prototype.isSupersetOf": "undefined is not a function",
     "draft (stage 2)›ArrayBuffer.prototype.transfer›ArrayBuffer.prototype.transfer()": "undefined is not a function",

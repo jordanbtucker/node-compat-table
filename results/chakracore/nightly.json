@@ -42,7 +42,7 @@
     "draft (stage 2)›Set methods›Set.prototype.union": "Object doesn't support property or method 'union'",
     "draft (stage 2)›Set methods›Set.prototype.difference": "Object doesn't support property or method 'difference'",
     "draft (stage 2)›Set methods›Set.prototype.symmetricDifference": "Object doesn't support property or method 'symmetricDifference'",
-    "draft (stage 2)›Set methods›Set.prototype.isDisjointWith": "Object doesn't support property or method 'isDisjointWith'",
+    "draft (stage 2)›Set methods›Set.prototype.isDisjointFrom": "Object doesn't support property or method 'isDisjointFrom'",
     "draft (stage 2)›Set methods›Set.prototype.isSubsetOf": "Object doesn't support property or method 'isSubsetOf'",
     "draft (stage 2)›Set methods›Set.prototype.isSupersetOf": "Object doesn't support property or method 'isSupersetOf'",
     "draft (stage 2)›ArrayBuffer.prototype.transfer›ArrayBuffer.prototype.transfer()": "Object doesn't support property or method 'transfer'",

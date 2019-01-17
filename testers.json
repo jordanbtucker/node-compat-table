@@ -821,7 +821,7 @@
     "draft (stage 2)›Set methods›Set.prototype.union": "var set = new Set([1, 2]).union(new Set([2, 3]));\nreturn set.size === 3\n  && set.has(1)\n  && set.has(2)\n  && set.has(3);",
     "draft (stage 2)›Set methods›Set.prototype.difference": "var set = new Set([1, 2, 3]).difference(new Set([3, 4]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(2);",
     "draft (stage 2)›Set methods›Set.prototype.symmetricDifference": "var set = new Set([1, 2]).symmetricDifference(new Set([2, 3]));\nreturn set.size === 2\n  && set.has(1)\n  && set.has(3);",
-    "draft (stage 2)›Set methods›Set.prototype.isDisjointWith": "return new Set([1, 2, 3]).isDisjointWith([4, 5, 6]);",
+    "draft (stage 2)›Set methods›Set.prototype.isDisjointFrom": "return new Set([1, 2, 3]).isDisjointFrom([4, 5, 6]);",
     "draft (stage 2)›Set methods›Set.prototype.isSubsetOf": "return new Set([1, 2, 3]).isSubsetOf([5, 4, 3, 2, 1]);",
     "draft (stage 2)›Set methods›Set.prototype.isSupersetOf": "return new Set([5, 4, 3, 2, 1]).isSupersetOf([1, 2, 3]);",
     "draft (stage 2)›ArrayBuffer.prototype.transfer›ArrayBuffer.prototype.transfer()": "const buffer1 = new Uint8Array([1, 2]).buffer;\nconst buffer2 = buffer1.transfer();\nreturn buffer1.byteLength === 0\n  && buffer2.byteLength === 2;",

@@ -784,10 +784,6 @@
     "misc›template literal revision": "function tag(strings, a) {\nreturn strings[0] === void 0 &&\nstrings.raw[0] === \"\\\\01\\\\1\\\\xg\\\\xAg\\\\u0\\\\u0g\\\\u00g\\\\u000g\\\\u{g\\\\u{0\\\\u{110000}\" &&\nstrings[1] === \"\\0\" &&\nstrings.raw[1] === \"\\\\0\" &&\na === 0;\n}\nreturn tag`\\01\\1\\xg\\xAg\\u0\\u0g\\u00g\\u000g\\u{g\\u{0\\u{110000}${0}\\0`;"
   },
   "ESNEXT": {
-    "candidate (stage 3)›string trimming›String.prototype.trimLeft": "return ' \\t \\n abc   \\t\\n'.trimLeft() === 'abc   \\t\\n';",
-    "candidate (stage 3)›string trimming›String.prototype.trimRight": "return ' \\t \\n abc   \\t\\n'.trimRight() === ' \\t \\n abc';",
-    "candidate (stage 3)›string trimming›String.prototype.trimStart": "return ' \\t \\n abc   \\t\\n'.trimStart() === 'abc   \\t\\n';",
-    "candidate (stage 3)›string trimming›String.prototype.trimEnd": "return ' \\t \\n abc   \\t\\n'.trimEnd() === ' \\t \\n abc';",
     "candidate (stage 3)›globalThis›\"globalThis\" global property is global object": "var actualGlobal = Function('return this')();\nactualGlobal.__system_global_test__ = 42;\nreturn typeof globalThis === 'object' && globalThis && globalThis === actualGlobal && !globalThis.lacksGlobalThis && globalThis.__system_global_test__ === 42;",
     "candidate (stage 3)›globalThis›\"globalThis\" global property has correct property descriptor": "var actualGlobal = Function('return this')();\nif (typeof globalThis !== 'object') { return false; }\nif (!('globalThis' in actualGlobal)) { return false; }\nif (Object.prototype.propertyIsEnumerable.call(actualGlobal, 'globalThis')) { return false; }\n\nvar descriptor = Object.getOwnPropertyDescriptor(actualGlobal, 'globalThis');\nreturn descriptor.value === actualGlobal && !descriptor.enumerable && descriptor.configurable && descriptor.writable;",
     "candidate (stage 3)›String.prototype.matchAll": "var iterator = '11a2bb'.matchAll(/(\\d)(\\D)/g);\nif(iterator[Symbol.iterator]() !== iterator)return false;\nvar a = '', b = '', c = '', step;\nwhile(!(step = iterator.next()).done){\n  a += step.value[0];\n  b += step.value[1];\n  c += step.value[2];\n}\nreturn a === '1a2b'\n  && b === '12'\n  && c === 'ab';",
@@ -796,8 +792,6 @@
     "candidate (stage 3)›instance class fields›private instance class fields initializers": "class C {\n  #x = 42;\n  x(){\n    return this.#x;\n  }\n}\nreturn new C().x() === 42;",
     "candidate (stage 3)›static class fields›public static class fields": "class C {\n  static x = 'x';\n}\nreturn C.x === 'x';",
     "candidate (stage 3)›static class fields›private static class fields": "class C {\n  static #x = 42;\n  x(){\n    return C.#x;\n  }\n}\nreturn new C().x() === 42;",
-    "candidate (stage 3)›Array.prototype.{flat, flatMap}›Array.prototype.flat": "return [1, [2, 3], [4, [5, 6]]].flat().join('') === '12345,6';",
-    "candidate (stage 3)›Array.prototype.{flat, flatMap}›Array.prototype.flatMap": "return [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {\n  return [it.a, it.b];\n}).join('') === '1234';",
     "candidate (stage 3)›BigInt›basic functionality": "return (1n + 2n) === 3n;",
     "candidate (stage 3)›BigInt›constructor": "return BigInt(\"3\") === 3n;",
     "candidate (stage 3)›BigInt›BigInt.asUintN": "return typeof BigInt.asUintN === 'function';",
@@ -806,8 +800,6 @@
     "candidate (stage 3)›BigInt›BigUint64Array": "var buffer = new ArrayBuffer(64);\nvar view = new BigUint64Array(buffer);\nview[0] = 0x10000000000000000n;\nreturn view[0] === 0n;",
     "candidate (stage 3)›BigInt›DataView.prototype.getBigInt64": "return typeof DataView.prototype.getBigInt64 === 'function';",
     "candidate (stage 3)›BigInt›DataView.prototype.getBigUint64": "return typeof DataView.prototype.getBigUint64 === 'function';",
-    "candidate (stage 3)›Object.fromEntries": "var object = Object.fromEntries(new Map([['foo', 42], ['bar', 23]]));\nreturn object.foo === 42 && object.bar === 23;",
-    "candidate (stage 3)›Well-formed JSON.stringify": "return JSON.stringify('\\uDF06\\uD834') === \"\\\"\\\\udf06\\\\ud834\\\"\"\n  && JSON.stringify('\\uDEAD') === \"\\\"\\\\udead\\\"\";",
     "draft (stage 2)›Generator function.sent Meta Property": "var result;\nfunction* generator() {\n  result = function.sent;\n}\nvar iter = generator();\niter.next('tromple');\nreturn result === 'tromple';",
     "draft (stage 2)›Class and Property Decorators›class decorators": "class A {\n  @nonconf\n  get B() {}\n}\nfunction nonconf(target, name, descriptor) {\n  descriptor.configurable = false;\n  return descriptor;\n}\nreturn Object.getOwnPropertyDescriptor(A.prototype, \"B\").configurable === false;",
     "draft (stage 2)›Realms": "return typeof Realm === \"function\"\n  && [\"eval\", \"global\", \"intrinsics\", \"stdlib\", \"directEval\", \"indirectEval\", \"initGlobal\", \"nonEval\"].every(function(key){\n    return key in Realm.prototype;\n  });",

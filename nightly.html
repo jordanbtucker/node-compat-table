@@ -13921,7 +13921,7 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                       <td>chakracore 1.11.1.0</td>
                     </tr>
                   </table>
-                </div><sup>Chakra</sup><sub class="unflagged">1% complete</sub>
+                </div><sup>Chakra</sup><sub class="unflagged">0% complete</sub>
               </th>
             </tr>
           </table>
@@ -13932,61 +13932,6 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
             <div class="hash" id="ESNEXT-candidate--stage-3-"></div><a href="#ESNEXT-candidate--stage-3-">candidate (stage 3)</a>
           </h2>
         </caption>
-        <tr>
-          <td class="feature sub" colspan="3">
-            <h3>
-              <div class="hash" id="ESNEXT-candidate--stage-3--string-trimming"></div><a href="#ESNEXT-candidate--stage-3--string-trimming">string trimming</a>
-            </h3>
-          </td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--string-trimming-String-prototype-trimLeft"></div><a href="#ESNEXT-candidate--stage-3--string-trimming-String-prototype-trimLeft">String.prototype.trimLeft</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--string-trimming-String-prototype-trimRight"></div><a href="#ESNEXT-candidate--stage-3--string-trimming-String-prototype-trimRight">String.prototype.trimRight</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
-          <td class="result"><div class="Yes" title="Test passed">Yes</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--string-trimming-String-prototype-trimStart"></div><a href="#ESNEXT-candidate--stage-3--string-trimming-String-prototype-trimStart">String.prototype.trimStart</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return ' \t \n abc   \t\n'.trimStart() === 'abc   \t\n';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;trimStart&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--string-trimming-String-prototype-trimEnd"></div><a href="#ESNEXT-candidate--stage-3--string-trimming-String-prototype-trimEnd">String.prototype.trimEnd</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return ' \t \n abc   \t\n'.trimEnd() === ' \t \n abc';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;trimEnd&#x27;">Error</div></td>
-        </tr>
         <tr>
           <td class="feature sub" colspan="3">
             <h3>
@@ -14054,32 +13999,6 @@ return a === '1a2b'
           </td>
           <td class="result"></td>
           <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;matchAll&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3---Object-fromEntries"></div><a href="#ESNEXT-candidate--stage-3---Object-fromEntries">Object.fromEntries</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">var object = Object.fromEntries(new Map([['foo', 42], ['bar', 23]]));
-return object.foo === 42 &amp;&amp; object.bar === 23;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;fromEntries&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3---Well-formed-JSON-stringify"></div><a href="#ESNEXT-candidate--stage-3---Well-formed-JSON-stringify">Well-formed JSON.stringify</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return JSON.stringify('\uDF06\uD834') === &quot;\&quot;\\udf06\\ud834\&quot;&quot;
-  &amp;&amp; JSON.stringify('\uDEAD') === &quot;\&quot;\\udead\&quot;&quot;;</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
-          <td class="result"><div class="No" title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="3">
@@ -14181,39 +14100,6 @@ return new C().x() === 42;</div>}
           </td>
           <td class="result"></td>
           <td class="result"><div class="Error" title="Invalid character">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature sub" colspan="3">
-            <h3>
-              <div class="hash" id="ESNEXT-candidate--stage-3--Array-prototype--flat--flatMap-"></div><a href="#ESNEXT-candidate--stage-3--Array-prototype--flat--flatMap-">Array.prototype.{flat, flatMap}</a>
-            </h3>
-          </td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Array-prototype--flat--flatMap--Array-prototype-flat"></div><a href="#ESNEXT-candidate--stage-3--Array-prototype--flat--flatMap--Array-prototype-flat">Array.prototype.flat</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return [1, [2, 3], [4, [5, 6]]].flat().join('') === '12345,6';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;flat&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-candidate--stage-3--Array-prototype--flat--flatMap--Array-prototype-flatMap"></div><a href="#ESNEXT-candidate--stage-3--Array-prototype--flat--flatMap--Array-prototype-flatMap">Array.prototype.flatMap</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">return [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {
-  return [it.a, it.b];
-}).join('') === '1234';</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;flatMap&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature sub" colspan="3">

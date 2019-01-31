@@ -38,8 +38,14 @@
                   </table>
                 </div><sup>Nightly!</sup><sub class="flagged">99% complete</sub><sub class="unflagged">99% complete</sub>
               </th>
-              <th class="version v11">11.8.0
+              <th class="version v11">11.9.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>11.9.0</td>
+                      <td>v8 7.0.276.38-node.16</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>11.8.0</td>
@@ -23708,8 +23714,14 @@ return a === 3;</div>}
                   </table>
                 </div><sup>Nightly!</sup><sub class="flagged">100% complete</sub><sub class="unflagged">100% complete</sub>
               </th>
-              <th class="version v11">11.8.0
+              <th class="version v11">11.9.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>11.9.0</td>
+                      <td>v8 7.0.276.38-node.16</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>11.8.0</td>
@@ -25457,8 +25469,14 @@ return (get + '' === &quot;length,1,2&quot;);</div>}
                   </table>
                 </div><sup>Nightly!</sup><sub class="flagged">100% complete</sub><sub class="unflagged">100% complete</sub>
               </th>
-              <th class="version v11">11.8.0
+              <th class="version v11">11.9.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>11.9.0</td>
+                      <td>v8 7.0.276.38-node.16</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>11.8.0</td>
@@ -28807,8 +28825,14 @@ return i === 0;</div>}
                   </table>
                 </div><sup>Nightly!</sup><sub class="flagged">100% complete</sub><sub class="unflagged">100% complete</sub>
               </th>
-              <th class="version v11">11.8.0
+              <th class="version v11">11.9.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>11.9.0</td>
+                      <td>v8 7.0.276.38-node.16</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>11.8.0</td>
@@ -30571,8 +30595,14 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
                   </table>
                 </div><sup>Nightly!</sup><sub class="flagged">10% complete</sub><sub class="unflagged">6% complete</sub>
               </th>
-              <th class="version v11">11.8.0
+              <th class="version v11">11.9.0
                 <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>11.9.0</td>
+                      <td>v8 7.0.276.38-node.16</td>
+                    </tr>
+                  </table>
                   <table>
                     <tr>
                       <td>11.8.0</td>
@@ -32499,6 +32529,44 @@ return works &amp;&amp; weakref.get() === undefined;</div>}
           <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-draft--stage-2---Promise-allSettled"></div><a href="#ESNEXT-draft--stage-2---Promise-allSettled">Promise.allSettled</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">Promise.allSettled([
+  Promise.resolve(1),
+  Promise.reject(2),
+  Promise.resolve(3)
+]).then(it =&gt; {
+  if (
+    it.length === 3 &amp;&amp;
+    it[0].status === 'fulfilled' &amp;&amp; it[0].value === 1 &amp;&amp;
+    it[1].status === 'rejected' &amp;&amp; it[1].reason === 2 &amp;&amp;
+    it[2].status === 'fulfilled' &amp;&amp; it[2].value === 3
+  ) asyncTestPassed();
+});</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
+          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
+          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
+        </tr>
+        <tr>
           <td class="feature sub" colspan="18">
             <h3>
               <div class="hash" id="ESNEXT-draft--stage-2--Class-and-Property-Decorators"></div><a href="#ESNEXT-draft--stage-2--Class-and-Property-Decorators">Class and Property Decorators</a>
@@ -33218,44 +33286,6 @@ return results.length === 3
           <td class="result"><div class="Error unflagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div><div class="Error flagged " title="Block-scoped declarations (let, const, function, class) not yet supported outside strict mode">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
           <td class="result"><div class="Error unflagged " title="Unexpected strict mode reserved word">Error</div><div class="Error flagged " title="Unexpected identifier">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-proposal--stage-1---Promise-allSettled"></div><a href="#ESNEXT-proposal--stage-1---Promise-allSettled">Promise.allSettled</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">Promise.allSettled([
-  Promise.resolve(1),
-  Promise.reject(2),
-  Promise.resolve(3)
-]).then(it =&gt; {
-  if (
-    it.length === 3 &amp;&amp;
-    it[0].status === 'fulfilled' &amp;&amp; it[0].value === 1 &amp;&amp;
-    it[1].status === 'rejected' &amp;&amp; it[1].reason === 2 &amp;&amp;
-    it[2].status === 'fulfilled' &amp;&amp; it[2].value === 3
-  ) asyncTestPassed();
-});</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
-          <td class="result"><div class="Error unflagged " title="Promise.allSettled is not a function">Error</div><div class="Error flagged " title="Promise.allSettled is not a function">Error</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="Error flagged " title="undefined is not a function">Error</div></td>
-          <td class="result"><div class="No unflagged " title="Test failed">No</div><div class="No flagged " title="Test failed">No</div></td>
         </tr>
         <tr>
           <td class="feature subsub">

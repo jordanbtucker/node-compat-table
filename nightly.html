@@ -14287,6 +14287,29 @@ return works &amp;&amp; weakref.get() === undefined;</div>}
           <td class="result"><div class="Error" title="Unexpected identifier after numeric literal">Error</div></td>
         </tr>
         <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-draft--stage-2---Promise-allSettled"></div><a href="#ESNEXT-draft--stage-2---Promise-allSettled">Promise.allSettled</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">Promise.allSettled([
+  Promise.resolve(1),
+  Promise.reject(2),
+  Promise.resolve(3)
+]).then(it =&gt; {
+  if (
+    it.length === 3 &amp;&amp;
+    it[0].status === 'fulfilled' &amp;&amp; it[0].value === 1 &amp;&amp;
+    it[1].status === 'rejected' &amp;&amp; it[1].reason === 2 &amp;&amp;
+    it[2].status === 'fulfilled' &amp;&amp; it[2].value === 3
+  ) asyncTestPassed();
+});</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;allSettled&#x27;">Error</div></td>
+        </tr>
+        <tr>
           <td class="feature sub" colspan="3">
             <h3>
               <div class="hash" id="ESNEXT-draft--stage-2--Class-and-Property-Decorators"></div><a href="#ESNEXT-draft--stage-2--Class-and-Property-Decorators">Class and Property Decorators</a>
@@ -14676,29 +14699,6 @@ return results.length === 3
           </td>
           <td class="result"><div class="Error" title="&quot;a𠮷b&quot;.codePoints(...) is not a function or its return value is not iterable">Error</div></td>
           <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;codePoints&#x27;">Error</div></td>
-        </tr>
-        <tr>
-          <td class="feature subsub">
-            <div class="hash" id="ESNEXT-proposal--stage-1---Promise-allSettled"></div><a href="#ESNEXT-proposal--stage-1---Promise-allSettled">Promise.allSettled</a>
-            <div class="info">?
-              <div class="fn">function(){
-                <div class="code">Promise.allSettled([
-  Promise.resolve(1),
-  Promise.reject(2),
-  Promise.resolve(3)
-]).then(it =&gt; {
-  if (
-    it.length === 3 &amp;&amp;
-    it[0].status === 'fulfilled' &amp;&amp; it[0].value === 1 &amp;&amp;
-    it[1].status === 'rejected' &amp;&amp; it[1].reason === 2 &amp;&amp;
-    it[2].status === 'fulfilled' &amp;&amp; it[2].value === 3
-  ) asyncTestPassed();
-});</div>}
-              </div>
-            </div>
-          </td>
-          <td class="result"></td>
-          <td class="result"><div class="Error" title="Object doesn&#x27;t support property or method &#x27;allSettled&#x27;">Error</div></td>
         </tr>
         <tr>
           <td class="feature subsub">

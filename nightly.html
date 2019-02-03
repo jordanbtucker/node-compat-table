@@ -16113,6 +16113,24 @@ return (@inverse function(it){
           <td class="result"><div class="Error" title="Invalid character">Error</div></td>
         </tr>
         <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-strawman--stage-0---Promise-any"></div><a href="#ESNEXT-strawman--stage-0---Promise-any">Promise.any</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">Promise.any([
+  Promise.resolve(1),
+  Promise.reject(2),
+  Promise.resolve(3)
+]).then(it =&gt; {
+  if (it === 1) asyncTestPassed();
+});</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
           <td class="feature sub" colspan="3">
             <h3>
               <div class="hash" id="ESNEXT-strawman--stage-0--additional-meta-properties"></div><a href="#ESNEXT-strawman--stage-0--additional-meta-properties">additional meta properties</a>

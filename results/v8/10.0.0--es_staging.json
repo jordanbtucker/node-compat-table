@@ -3,8 +3,8 @@
   "_engine": "v8 6.6.346.24-node.5",
   "ESNEXT": {
     "_successful": 3,
-    "_count": 156,
-    "_percent": 0.019230769230769232,
+    "_count": 157,
+    "_percent": 0.01910828025477707,
     "candidate (stage 3)›globalThis›\"globalThis\" global property is global object": false,
     "candidate (stage 3)›globalThis›\"globalThis\" global property has correct property descriptor": false,
     "candidate (stage 3)›String.prototype.matchAll": "\"11a2bb\".matchAll is not a function",
@@ -152,6 +152,7 @@
     "strawman (stage 0)›syntactic tail calls›mutual recursion": "Unexpected token continue",
     "strawman (stage 0)›object shorthand improvements›object initializers": "Unexpected token .",
     "strawman (stage 0)›object shorthand improvements›destructuring assignments": "Unexpected token .",
+    "strawman (stage 0)›Promise.any": "Promise.any is not a function",
     "pre-strawman›Metadata reflection API›Reflect.defineMetadata": false,
     "pre-strawman›Metadata reflection API›Reflect.hasMetadata": false,
     "pre-strawman›Metadata reflection API›Reflect.hasOwnMetadata": false,

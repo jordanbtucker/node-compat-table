@@ -1,12 +1,12 @@
 {
-  "_version": "12.0.0-nightly201902158e68dc53b3",
-  "_engine": "v8 7.1.302.33-node.13",
+  "_version": "11.10.0",
+  "_engine": "v8 7.0.276.38-node.17",
   "ESNEXT": {
-    "_successful": 10,
+    "_successful": 8,
     "_count": 157,
-    "_percent": 0.06369426751592357,
-    "candidate (stage 3)›globalThis›\"globalThis\" global property is global object": true,
-    "candidate (stage 3)›globalThis›\"globalThis\" global property has correct property descriptor": true,
+    "_percent": 0.050955414012738856,
+    "candidate (stage 3)›globalThis›\"globalThis\" global property is global object": false,
+    "candidate (stage 3)›globalThis›\"globalThis\" global property has correct property descriptor": false,
     "candidate (stage 3)›String.prototype.matchAll": "\"11a2bb\".matchAll is not a function",
     "candidate (stage 3)›instance class fields›public instance class fields": "Unexpected token =",
     "candidate (stage 3)›instance class fields›private instance class fields basic support": "Invalid or unexpected token",

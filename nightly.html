@@ -13898,6 +13898,432 @@ return tag`\01\1\xg\xAg\u0\u0g\u00g\u000g\u{g\u{0\u{110000}${0}\0`;</div>}
         </tr>
       </table>
     </article>
+    <article id="ES2019">
+        <header>
+          <h1><a href="#ES2019">Node.js ES2019 Support</a></h1>
+          <table class="headings">
+            <tr>
+              <th class="version v9">9.0.0
+                <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>9.0.0</td>
+                      <td>v8 6.4.0 (candidate)</td>
+                    </tr>
+                  </table>
+                </div><sup>v8</sup><sub class="unflagged">% complete</sub>
+              </th>
+              <th class="version v9">9.0.0
+                <div class="details"><small>(these versions have identical results)</small>
+                  <table>
+                    <tr>
+                      <td>12.0.0</td>
+                      <td>chakracore 1.11.1.0</td>
+                    </tr>
+                  </table>
+                </div><sup>Chakra</sup><sub class="unflagged">% complete</sub>
+              </th>
+            </tr>
+          </table>
+        </header>
+      <table class="results">
+        <caption>
+          <h2 class="category">
+            <div class="hash" id="ES2019-features"></div><a href="#ES2019-features">features</a>
+          </h2>
+        </caption>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ES2019-features-"></div><a href="#ES2019-features-"></a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-features--Object-fromEntries"></div><a href="#ES2019-features--Object-fromEntries">Object.fromEntries</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var object = Object.fromEntries(new Map([['foo', 42], ['bar', 23]]));
+return object.foo === 42 &amp;&amp; object.bar === 23;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ES2019-features-string-trimming"></div><a href="#ES2019-features-string-trimming">string trimming</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-features-string-trimming-String-prototype-trimLeft"></div><a href="#ES2019-features-string-trimming-String-prototype-trimLeft">String.prototype.trimLeft</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return ' \t \n abc   \t\n'.trimLeft() === 'abc   \t\n';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-features-string-trimming-String-prototype-trimRight"></div><a href="#ES2019-features-string-trimming-String-prototype-trimRight">String.prototype.trimRight</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return ' \t \n abc   \t\n'.trimRight() === ' \t \n abc';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-features-string-trimming-String-prototype-trimStart"></div><a href="#ES2019-features-string-trimming-String-prototype-trimStart">String.prototype.trimStart</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return ' \t \n abc   \t\n'.trimStart() === 'abc   \t\n';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-features-string-trimming-String-prototype-trimEnd"></div><a href="#ES2019-features-string-trimming-String-prototype-trimEnd">String.prototype.trimEnd</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return ' \t \n abc   \t\n'.trimEnd() === ' \t \n abc';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ES2019-features-Array-prototype--flat--flatMap-"></div><a href="#ES2019-features-Array-prototype--flat--flatMap-">Array.prototype.{flat, flatMap}</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-features-Array-prototype--flat--flatMap--Array-prototype-flat"></div><a href="#ES2019-features-Array-prototype--flat--flatMap--Array-prototype-flat">Array.prototype.flat</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return [1, [2, 3], [4, [5, 6]]].flat().join('') === '12345,6';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-features-Array-prototype--flat--flatMap--Array-prototype-flatMap"></div><a href="#ES2019-features-Array-prototype--flat--flatMap--Array-prototype-flatMap">Array.prototype.flatMap</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return [{a: 1, b: 2}, {a: 3, b: 4}].flatMap(function (it) {
+  return [it.a, it.b];
+}).join('') === '1234';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-features-Array-prototype--flat--flatMap--flat-and-flatMap-in-Array-prototype---unscopables-"></div><a href="#ES2019-features-Array-prototype--flat--flatMap--flat-and-flatMap-in-Array-prototype---unscopables-">flat and flatMap in Array.prototype[@@unscopables]</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Array.prototype[Symbol.unscopables].flat
+  &amp;&amp; Array.prototype[Symbol.unscopables].flatMap;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+      </table>
+      <table class="results">
+        <caption>
+          <h2 class="category">
+            <div class="hash" id="ES2019-misc"></div><a href="#ES2019-misc">misc</a>
+          </h2>
+        </caption>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ES2019-misc-optional-catch-binding"></div><a href="#ES2019-misc-optional-catch-binding">optional catch binding</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-misc-optional-catch-binding-basic"></div><a href="#ES2019-misc-optional-catch-binding-basic">basic</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">try {
+  throw new Error();
+}
+catch {
+  return true;
+}
+return false;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-misc-optional-catch-binding-await"></div><a href="#ES2019-misc-optional-catch-binding-await">await</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">(async function (){
+  try {
+    await Promise.reject();
+  }
+  catch {
+    asyncTestPassed();
+  }
+})();</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-misc-optional-catch-binding-yield"></div><a href="#ES2019-misc-optional-catch-binding-yield">yield</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">function *foo() {
+  try {
+    yield;
+    throw new Error();
+  }
+  catch {
+    return true;
+  }
+}
+
+var it = foo();
+it.next();
+return it.next().value;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ES2019-misc-Symbol-prototype-description"></div><a href="#ES2019-misc-Symbol-prototype-description">Symbol.prototype.description</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-misc-Symbol-prototype-description-basic"></div><a href="#ES2019-misc-Symbol-prototype-description-basic">basic</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Symbol('foo').description === 'foo';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-misc-Symbol-prototype-description-empty-description"></div><a href="#ES2019-misc-Symbol-prototype-description-empty-description">empty description</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Symbol('').description === '';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-misc-Symbol-prototype-description-undefined-description"></div><a href="#ES2019-misc-Symbol-prototype-description-undefined-description">undefined description</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return Symbol.prototype.hasOwnProperty('description')
+  &amp;&amp; Symbol().description === undefined;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ES2019-misc-Function-prototype-toString-revision"></div><a href="#ES2019-misc-Function-prototype-toString-revision">Function.prototype.toString revision</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-misc-Function-prototype-toString-revision-functions-created-with-the-Function-constructor"></div><a href="#ES2019-misc-Function-prototype-toString-revision-functions-created-with-the-Function-constructor">functions created with the Function constructor</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var fn = Function('a', ' /\x2A a \x2A/ b, c /\x2A b \x2A/ //', '/\x2A c \x2A/ ; /\x2A d \x2A/ //');
+var str = 'function anonymous(a, /\x2A a \x2A/ b, c /\x2A b \x2A/ //\n) {\n/\x2A c \x2A/ ; /\x2A d \x2A/ //\n}';
+return fn + '' === str;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-misc-Function-prototype-toString-revision-arrows"></div><a href="#ES2019-misc-Function-prototype-toString-revision-arrows">arrows</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var str = 'a =&gt; b';
+return eval('(' + str + ')') + '' === str;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-misc-Function-prototype-toString-revision--native-code-"></div><a href="#ES2019-misc-Function-prototype-toString-revision--native-code-">[native code]</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">const NATIVE_EVAL_RE = /\bfunction\b[\s\S]*\beval\b[\s\S]*\([\s\S]*\)[\s\S]*\{[\s\S]*\[[\s\S]*\bnative\b[\s\S]+\bcode\b[\s\S]*\][\s\S]*\}/;
+return NATIVE_EVAL_RE.test(eval + '');</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-misc-Function-prototype-toString-revision-class-expression-with-implicit-constructor"></div><a href="#ES2019-misc-Function-prototype-toString-revision-class-expression-with-implicit-constructor">class expression with implicit constructor</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var str = 'class A {}';
+return eval('(' + str + ')') + '' === str;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-misc-Function-prototype-toString-revision-class-expression-with-explicit-constructor"></div><a href="#ES2019-misc-Function-prototype-toString-revision-class-expression-with-explicit-constructor">class expression with explicit constructor</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var str = 'class /\x2A a \x2A/ A /\x2A b \x2A/ extends /\x2A c \x2A/ function B(){} /\x2A d \x2A/ { /\x2A e \x2A/ constructor /\x2A f \x2A/ ( /\x2A g \x2A/ ) /\x2A h \x2A/ { /\x2A i \x2A/ ; /\x2A j \x2A/ } /\x2A k \x2A/ m /\x2A l \x2A/ ( /\x2A m \x2A/ ) /\x2A n \x2A/ { /\x2A o \x2A/ } /\x2A p \x2A/ }';
+return eval('(/\x2A before \x2A/' + str + '/\x2A after \x2A/)') + '' === str;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-misc-Function-prototype-toString-revision-unicode-escape-sequences-in-identifiers"></div><a href="#ES2019-misc-Function-prototype-toString-revision-unicode-escape-sequences-in-identifiers">unicode escape sequences in identifiers</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var str = 'function \\u0061(\\u{62}, \\u0063) { \\u0062 = \\u{00063}; return b; }';
+return eval('(/\x2A before \x2A/' + str + '/\x2A after \x2A/)') + '' === str;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-misc-Function-prototype-toString-revision-methods-and-computed-property-names"></div><a href="#ES2019-misc-Function-prototype-toString-revision-methods-and-computed-property-names">methods and computed property names</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var str = '[ /\x2A a \x2A/ &quot;f&quot; /\x2A b \x2A/ ] /\x2A c \x2A/ ( /\x2A d \x2A/ ) /\x2A e \x2A/ { /\x2A f \x2A/ }';
+return eval('({ /\x2A before \x2A/' + str + '/\x2A after \x2A/ }.f)') + '' === str;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ES2019-misc-JSON-superset"></div><a href="#ES2019-misc-JSON-superset">JSON superset</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-misc-JSON-superset-LINE-SEPARATOR-can-appear-in-string-literals"></div><a href="#ES2019-misc-JSON-superset-LINE-SEPARATOR-can-appear-in-string-literals">LINE SEPARATOR can appear in string literals</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return eval(&quot;'\u2028'&quot;) === &quot;\u2028&quot;;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-misc-JSON-superset-PARAGRAPH-SEPARATOR-can-appear-in-string-literals"></div><a href="#ES2019-misc-JSON-superset-PARAGRAPH-SEPARATOR-can-appear-in-string-literals">PARAGRAPH SEPARATOR can appear in string literals</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return eval(&quot;'\u2029'&quot;) === &quot;\u2029&quot;;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ES2019-misc-"></div><a href="#ES2019-misc-"></a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ES2019-misc--Well-formed-JSON-stringify"></div><a href="#ES2019-misc--Well-formed-JSON-stringify">Well-formed JSON.stringify</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">return JSON.stringify('\uDF06\uD834') === &quot;\&quot;\\udf06\\ud834\&quot;&quot;
+  &amp;&amp; JSON.stringify('\uDEAD') === &quot;\&quot;\\udead\&quot;&quot;;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+      </table>
+    </article>
     <article id="ESNEXT">
         <header>
           <h1><a href="#ESNEXT">Node.js ESNEXT Support</a></h1>
@@ -14209,6 +14635,42 @@ return view[0] === 0n;</div>}
           </td>
           <td class="result"></td>
           <td class="result"><div class="No" title="Test failed">No</div></td>
+        </tr>
+        <tr>
+          <td class="feature sub" colspan="3">
+            <h3>
+              <div class="hash" id="ESNEXT-candidate--stage-3--Legacy-RegExp-features-in-JavaScript"></div><a href="#ESNEXT-candidate--stage-3--Legacy-RegExp-features-in-JavaScript">Legacy RegExp features in JavaScript</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-candidate--stage-3--Legacy-RegExp-features-in-JavaScript-RegExp--lastMatch-"></div><a href="#ESNEXT-candidate--stage-3--Legacy-RegExp-features-in-JavaScript-RegExp--lastMatch-">RegExp &quot;lastMatch&quot;</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">var re = /\w/;
+re.exec('x');
+return RegExp.lastMatch === 'x';</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
+        </tr>
+        <tr>
+          <td class="feature subsub">
+            <div class="hash" id="ESNEXT-candidate--stage-3--Legacy-RegExp-features-in-JavaScript-RegExp--1--9"></div><a href="#ESNEXT-candidate--stage-3--Legacy-RegExp-features-in-JavaScript-RegExp--1--9">RegExp.$1-$9</a>
+            <div class="info">?
+              <div class="fn">function(){
+                <div class="code">for (var i = 1; i &lt; 10; i++) {
+  if (!(('$' + i) in RegExp)) return false;
+}
+return true;</div>}
+              </div>
+            </div>
+          </td>
+          <td class="result"></td>
+          <td class="result"></td>
         </tr>
       </table>
       <table class="results">

@@ -5,6 +5,7 @@ var testers = {
   ES2016: {},
   ES2017: {},
   ES2018: {},
+  ES2019: {},
   ESNEXT:  require('./testers-esnext.json')
 }
 
@@ -20,6 +21,10 @@ Object.keys(esnext).forEach((key) => {
 
   if (/^2018/.test(key)) {
     testers.ES2018[key.substr(5)] = esnext[key]
+  }
+
+  if (/^2019/.test(key)) {
+    testers.ES2019[key.substr(5)] = esnext[key]
   }
 })
 console.log(JSON.stringify(testers, null, 2))

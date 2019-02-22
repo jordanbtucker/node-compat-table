@@ -19,6 +19,8 @@ body
     label(for='flagged') requires&nbsp;
       a(href='https://nodejs.org/en/docs/es6/', target="_blank") harmony
       | &nbsp;flag ⚐
+    input#supported(type='checkbox')
+    label(for='supported') supported only
   #credits
     | Created by&nbsp;
     a(href='https://github.com/williamkapke', target="_blank") William Kapke
@@ -40,7 +42,8 @@ body
       table.headings
         tr
           each details, nodeVersion in headers
-            th.version(class='v' + details.version.split('.')[0])=details.version
+            - classes = ('v' + details.version.split('.')[0]) + (isSupported(nodeVersion) ? '' : ' unsupported')
+            th.version(class=classes)=details.version
               .details
                 small (these versions have identical results)
                 each detail in details.includes
@@ -84,7 +87,7 @@ body
                         .code=obj3.code
                         | }
                 each nodeVersion in Object.keys(headers)
-                  - classes = requiresFlag(nodeVersion, esVersion, obj3.path)? 'flag' : ''
+                  - classes = (requiresFlag(nodeVersion, esVersion, obj3.path)? 'flag' : '') + (isSupported(nodeVersion) ? '' : ' unsupported')
                   td.result(class=classes) !{results(nodeVersion, esVersion, obj3.path)}
 
 

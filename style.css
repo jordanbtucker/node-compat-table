@@ -44,7 +44,14 @@ label[for=flagged] {
   font-size: 12px;
   top: 2px;
 }
+label[for=supported] {
+  cursor: pointer;
+  right: 400px;
+  font-size: 12px;
+  top: 2px;
+}
 label[for=flagged],
+label[for=supported],
 #credits {
   z-index: 101;
   position: fixed;
@@ -107,6 +114,15 @@ body.scrolled .headings {
 #flagged ~ article .unflagged,
 #flagged ~ header .unflagged { display:block; }
 
+#supported {
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  right: 490px;
+}
+
+#supported:checked ~ article .unsupported,
+#supported:checked ~ header .unsupported { display: none; }
 
 article {
   position: relative;

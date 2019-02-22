@@ -14,6 +14,7 @@ git config user.name "Imma Bot"
 curl https://raw.githubusercontent.com/kangax/compat-table/gh-pages/data-es6.js > data-es6.js
 curl https://raw.githubusercontent.com/kangax/compat-table/gh-pages/data-es2016plus.js > data-es2016plus.js
 curl https://raw.githubusercontent.com/kangax/compat-table/gh-pages/data-esnext.js > data-esnext.js
+curl https://raw.githubusercontent.com/nodejs/Release/master/schedule.json > schedule.json
 
 echo
 echo 'extracting testers...'

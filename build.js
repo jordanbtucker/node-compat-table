@@ -28,6 +28,18 @@ function requiresFlag (nodeVersion, esVersion, path) {
   var unflagged = $get(results.unflagged, nodeVersion, esVersion)
   return flagged && unflagged && flagged[path] === true && unflagged[path] !== true
 }
+
+var schedule = require('./schedule.json')
+function isSupported (nodeVersion) {
+  var major = nodeVersion.replace(/^(0\.\d+|\d+).*/, '$1')
+  var version = schedule['v' + major]
+  if(!version) return false
+  var now = new Date()
+  var start = new Date(version.start)
+  var end = new Date(version.end)
+  return now >= start && now <= end
+}
+
 function result (type, nodeVersion, esVersion, path) {
   var result = $get(results, type, nodeVersion)
   if (result === undefined) return ''
@@ -49,6 +61,7 @@ var html = pug.renderFile('index.pug', {
     return result('unflagged', nodeVersion, esVersion, path) + result('flagged', nodeVersion, esVersion, path)
   },
   requiresFlag: requiresFlag,
+  isSupported: isSupported,
   percent: function (nodeVersion, esVersion, unflagged) {
     var datasource = unflagged ? results.unflagged : results.flagged
     var data = $get(datasource, nodeVersion, esVersion)

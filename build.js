@@ -31,6 +31,9 @@ function requiresFlag (nodeVersion, esVersion, path) {
 
 var schedule = require('./schedule.json')
 function isSupported (nodeVersion) {
+  var header = headers[nodeVersion]
+  // console.log(header)
+  if(!header || !header.latest) return false
   var major = nodeVersion.replace(/^(0\.\d+|\d+).*/, '$1')
   var version = schedule['v' + major]
   if(!version) return false

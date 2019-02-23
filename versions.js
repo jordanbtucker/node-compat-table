@@ -15,6 +15,8 @@ module.exports = function(engine) {
     catch(e) {}
   }
 
+  let lastMajor
+
   versions.unshift('nightly')
   versions.forEach((v) => {
     if(!v) return; // ignore empty lines
@@ -28,13 +30,23 @@ module.exports = function(engine) {
       prev.parent = v
       out[v] = []
     }
+
+    const major = v.replace(/^(0\.\d+|\d+).*/, '$1')
+    let latest = false
+    if(major !== lastMajor) {
+      latest = true
+      lastMajor = major
+    }
+
     out[prev.parent].push({
       version: v,
-      engine: cur.unflagged.engine
+      engine: cur.unflagged.engine,
+      // latest: latest
     })
     prev.flagged = cur.flagged
     prev.unflagged = cur.unflagged
   })
+  console.log(out)
   return out
 }
 
